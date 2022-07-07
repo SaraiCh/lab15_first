@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="ALMACEN"
+        android:textSize="40sp"
+        android:layout_marginBottom="20dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/listado"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginBottom="30dp" />
+
+            <EditText
+                android:id="@+id/productos"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="15dp"
+                android:hint="nombre del producto" />
+
+            <EditText
+                android:id="@+id/precio"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Precio"
+                android:inputType="number" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/agregar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="150dp"
+                android:onClick="Met_agregar"
+                android:text="AGREGAR" />
+
+            <TextView
+                android:id="@+id/leyenda"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:text="Información" />
+
+            <TextView
+                android:id="@+id/preciotxt"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:text="precio" />
+
+            <TextView
+                android:id="@+id/igvpreciotxt"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="46dp"
+                android:text="precio con igv" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
